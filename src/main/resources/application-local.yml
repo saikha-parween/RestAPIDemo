@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/employee
+    username: employee
+    password: postgres
+logging:
+  level:
+    root: INFO
+application:
+

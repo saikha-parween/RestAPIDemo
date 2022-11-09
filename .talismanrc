@@ -1,0 +1,19 @@
+fileignoreconfig:
+- filename: src/main/resources/db/migration/V1.1__Addresstable.sql
+  checksum: 4e45fb6e0cb8695919ccf33424380d4b1f407e7483941f343d446b55b19a0aa4
+- filename: src/main/resources/db/migration/V1.2__UserTable.sql
+  checksum: 6385b6727d3ddc2f7d50d2061164eb0b9b08a143416f8418cdebac35a5b300fd
+- filename: src/main/resources/db/migration/V1.3__addressTable.sql
+  checksum: ce1ad3bd9c7c394d4a7a3a6633e3f15c57e5cd43aa3dd755a132a125eb51d224
+- filename: src/main/resources/db/migration/V1.4__customerTable.sql
+  checksum: c00cf260af5c2e9b04a0e2de3c1c60831f394d12c7b2d90f3ef57b1aecb836e4
+- filename: src/main/resources/db/migration/V1__Customer.sql
+  checksum: c82d48ccc5502e22e2b76213c3a785d17e90ef74984554d53158f4892580ec34
+- filename: build.gradle
+  checksum: f8bc6c31bbba44c7dc0d84f99eb62dafede084dc9424ee563515a14946b2c9b3
+- filename: src/main/resources/application-local.yml
+  checksum: d945228746a9fa7466e796acc6ad7e532d16b9fb83e0ec4273a7c88ca42c115b
+- filename: src/main/resources/application.yml
+  checksum: 39ded3ccda95aa138327c1d190cf9180d3b60b15dea3bb94cad719c677537176
+version: ""
+
