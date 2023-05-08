@@ -1,0 +1,5 @@
+--ALTER TABLE userTable
+--ADD last_name varchar(50);
+--
+--ALTER TABLE userTable
+--RENAME COLUMN name TO first_name;

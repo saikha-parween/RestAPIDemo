@@ -1,8 +1,6 @@
 package com.customer.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -54,12 +52,8 @@ public class Address {
             return false;
         Address other = (Address) obj;
         if (this.getAddressId() == null) {
-            if (other.getAddressId() != null)
-                return false;
-        }
-        else if (!this.getAddressId().equals(other.getAddressId()))
-            return false;
-        return true;
+            return other.getAddressId() == null;
+        } else return this.getAddressId().equals(other.getAddressId());
     }
 
     @Override
