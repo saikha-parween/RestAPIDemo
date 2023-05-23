@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO getUser(Integer customerId) throws ApplicationException {
         Optional<UserTable> optional = userRespository.findById(customerId);
-        UserTable user = optional.orElseThrow(() -> new ApplicationException("Service.CUSTOMER_NOT_FOUND"));
+        UserTable user = optional.orElseThrow(() -> new ApplicationException("USER_NOT_FOUND"));
         UserDTO userDTO = new UserDTO();
         userDTO.setUserId(user.getUserId());
         userDTO.setDateOfBirth(user.getDateOfBirth());
@@ -79,14 +79,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUser(Integer customerId, String emailId) throws ApplicationException {
         Optional<UserTable> customer = userRespository.findById(customerId);
-        UserTable c = customer.orElseThrow(() -> new ApplicationException("Service.CUSTOMER_NOT_FOUND"));
+        UserTable c = customer.orElseThrow(() -> new ApplicationException("USER_NOT_FOUND"));
         c.setEmailId(emailId);
     }
 
     @Override
     public void deleteUser(Integer customerId) throws ApplicationException {
         Optional<UserTable> customer = userRespository.findById(customerId);
-        customer.orElseThrow(() -> new ApplicationException("Service.CUSTOMER_NOT_FOUND"));
+        customer.orElseThrow(() -> new ApplicationException("USER_NOT_FOUND"));
         userRespository.deleteById(customerId);
     }
 
@@ -109,7 +109,7 @@ public class UserServiceImpl implements UserService {
             userDTOS.add(userDTO);
         });
         if (userDTOS.isEmpty())
-            throw new ApplicationException("Service.CUSTOMERS_NOT_FOUND");
+            throw new ApplicationException("USERS_NOT_FOUND");
         return userDTOS;
     }
 
